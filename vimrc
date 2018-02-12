@@ -87,7 +87,7 @@ set tabstop=4             " tab spacing
 set softtabstop=4         " unify
 set shiftwidth=4          " indent/outdent by 2 columns
 set shiftround            " always indent/outdent to the nearest tabstop
-"set expandtab             " use spaces instead of tabs
+set expandtab             " use spaces instead of tabs
 "set smartindent           " automatically insert one extra level of indentation
 "set smarttab              " use tabs at the start of a line, spaces elsewhere
 "set nowrap                " don't wrap text
