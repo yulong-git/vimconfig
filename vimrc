@@ -15,11 +15,11 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " Include plugins on GitHub repos
-Plugin 'flazz/vim-colorschemes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'lervag/vimtex'
-Plugin 'jalvesaq/Nvim-R'
-Plugin 'scrooloose/nerdtree'
+Plugin 'flazz/vim-colorschemes'     " Color schemes
+Plugin 'tpope/vim-fugitive'         " [NOT USED] Git wrapper
+Plugin 'lervag/vimtex'              " Latex plugin
+Plugin 'jalvesaq/Nvim-R'            " R plugin
+Plugin 'scrooloose/nerdtree'        " File Navigation
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 
@@ -63,8 +63,12 @@ let R_show_args = 1 " show arguments for functions during omnicompletion
 let g:Rout_more_colors = 1 " R commands in R output are highlighted
 let g:rout_follow_colorscheme = 1 " highlighted with current colorscheme
 
-""""" NERDtree """""
-nnoremap nt :NERDTreeToggle<CR> " Shortcut for NERDtree
+""""" NERDTree """""
+" Shortcut for NERDTree
+nnoremap nt :NERDTreeToggle<CR> 
+" Open Vim in NERDTree if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
 """""""""""""""""""""""""""""""""""
@@ -84,7 +88,9 @@ nnoremap <C-H> <C-W><C-H>
 """""""""" Vim UI """"""""""""""
 syntax enable
 set spell spelllang=en_us
- 
+" Add Chinese Support
+set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
+
 " TIP: if you write your \label's as \label{fig:something}, then if you
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
