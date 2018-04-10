@@ -48,11 +48,11 @@ let g:vimtex_view_method = 'skim' " Default PDF viewer
 
 """"" NvimR """""
 " Send line
-nmap , <Plug>RDSendLine 
+nnoremap , <Plug>RDSendLine 
 " send multiple lines  
-vmap , <Plug>RDSendSelection 
+vnoremap , <Plug>RDSendSelection 
 " send multiple lines + echo lines
-vmap ,e <Plug>RESendSelection
+vnoremap ,e <Plug>RESendSelection
 let R_assign = 0 " Disable mapping of _ to <-
 let R_in_buffer = 0
 let R_applescript = 1 " Run native R console
@@ -62,6 +62,9 @@ let R_rconsole_width = 0 " always horizontal split
 let R_show_args = 1 " show arguments for functions during omnicompletion
 let g:Rout_more_colors = 1 " R commands in R output are highlighted
 let g:rout_follow_colorscheme = 1 " highlighted with current colorscheme
+
+""""" NERDtree """""
+nnoremap nt :NERDTreeToggle<CR> " Shortcut for NERDtree
 
 
 """""""""""""""""""""""""""""""""""
