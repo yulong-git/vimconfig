@@ -1,5 +1,5 @@
-
-"""""""""" Plugins/Vundle """"""""""
+""""""""""""""""""""""""""""""""""""""
+"""""""""" Plugins/Vundle """"""""""""
 " Vundle SETUP
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -14,11 +14,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+" Include plugins on GitHub repos
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lervag/vimtex'
 Plugin 'jalvesaq/Nvim-R'
+Plugin 'scrooloose/nerdtree'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 
@@ -38,16 +39,14 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
+""""""""""""""""""""""""""""""""""""""""
+"""""""""" Plugin Setup """"""""""""""""
 
-"""""""""" Plugin Setup &  Key Remap """"""""""
-" ESC remapped in Insert mode
-inoremap jk <esc>
-
-""" VimTex """
+""""" VimTex """""
 let g:vimtex_view_method = 'skim' " Default PDF viewer
 
 
-""" NvimR """
+""""" NvimR """""
 " Send line
 nmap , <Plug>RDSendLine 
 " send multiple lines  
@@ -65,8 +64,21 @@ let g:Rout_more_colors = 1 " R commands in R output are highlighted
 let g:rout_follow_colorscheme = 1 " highlighted with current colorscheme
 
 
+"""""""""""""""""""""""""""""""""""
+"""""""""" Key Remapping """"""""""
 
-"""""""""" Vim UI """"""""""
+" ESC remapped in Insert mode
+inoremap jk <esc>
+
+" Split navigations made easy
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+""""""""""""""""""""""""""""""""
+"""""""""" Vim UI """"""""""""""
 syntax enable
 set spell spelllang=en_us
  
