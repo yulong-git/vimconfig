@@ -48,11 +48,11 @@ let g:vimtex_view_method = 'skim' " Default PDF viewer
 
 """"" NvimR """""
 " Send line
-nnoremap , <Plug>RDSendLine 
+nmap , <Plug>RDSendLine 
 " send multiple lines  
-vnoremap , <Plug>RDSendSelection 
+vmap , <Plug>RDSendSelection 
 " send multiple lines + echo lines
-vnoremap ,e <Plug>RESendSelection
+vmap ,e <Plug>RESendSelection
 let R_assign = 0 " Disable mapping of _ to <-
 let R_in_buffer = 0
 let R_applescript = 1 " Run native R console
