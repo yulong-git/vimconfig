@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'         " [NOT USED] Git wrapper
 Plugin 'lervag/vimtex'              " Latex plugin
 Plugin 'jalvesaq/Nvim-R'            " R plugin
 Plugin 'scrooloose/nerdtree'        " File Navigation
+Plugin 'ajh17/VimCompletesMe'       " Light-weight Auto-completion
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 
