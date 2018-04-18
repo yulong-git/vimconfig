@@ -49,9 +49,9 @@ let g:vimtex_view_method = 'skim' " Default PDF viewer
 
 """"" NvimR """""
 " Send line
-nmap , <Plug>RDSendLine 
+nmap ,, <Plug>RDSendLine 
 " send multiple lines  
-vmap , <Plug>RDSendSelection 
+vmap ,, <Plug>RDSendSelection 
 " send multiple lines + echo lines
 vmap ,e <Plug>RESendSelection
 let R_assign = 0 " Disable mapping of _ to <-
@@ -84,6 +84,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Used to change CD to current file and display PWD
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 """"""""""""""""""""""""""""""""
 """""""""" Vim UI """"""""""""""
