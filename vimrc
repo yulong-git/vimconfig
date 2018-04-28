@@ -53,7 +53,7 @@ nmap ,, <Plug>RDSendLine
 " send multiple lines  
 vmap ,, <Plug>RDSendSelection 
 " send multiple lines + echo lines
-vmap ,m <Plug>RESendSelection 
+vmap ,e <Plug>RESendSelection 
 let R_assign = 0 " Disable mapping of _ to <-
 let R_in_buffer = 0 " Run R in buffer
 let R_applescript = 1 " Run native R console
