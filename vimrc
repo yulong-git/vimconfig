@@ -51,11 +51,11 @@ let g:vimtex_view_method = 'skim' " Default PDF viewer
 " Send line
 nmap ,, <Plug>RDSendLine 
 " send multiple lines  
-vmap ,, <Plug>RDSendSelection 
+vmap ,s <Plug>RDSendSelection 
 " send multiple lines + echo lines
-vmap ,e <Plug>RESendSelection
+vmap ,, <Plug>RESendSelection 
 let R_assign = 0 " Disable mapping of _ to <-
-let R_in_buffer = 0
+let R_in_buffer = 0 " Run R in buffer
 let R_applescript = 1 " Run native R console
 let R_min_editor_width = 80 " set a minimum source editor width
 let R_rconsole_height = 450
